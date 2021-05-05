@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Base{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'playground/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/df785adab4.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- header -->
+    <section class="header">
+        <nav>
+            <a href="{% url 'home-page' %}"><img id="logo" src="{% static 'playground/media/logo.png' %}" alt="logo"></a>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li class="nav"><a href="#">HOME</a></li>
+                    <li class="nav"><a href="#">BLOGS</a></li>
+                    <li class="nav"><a href="#">PLAYGROUND</a></li>
+                    <li class="nav"><a href="#">ABOUT US</a></li>
+                    <li><a href="#" class="loginbtn">Log in</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+        <div class="text-box">
+            <h1>Blog Handim</h1>
+            <p>A platform for bloggers to compete and earn</p>
+            <a href="#" class="linkbtn">Join the Community</a>
+        </div>
+    </section>
+
+<!-- Services -->
+    <section class="service">
+        <h1>Services we provide</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi optio culpa unde ratione repellat, voluptatum, omnis cum nemo quis repellendus vitae mollitia alias est autem.</p>
+        <div class="row">
+            <div class="service-col">
+                <h3>Blogs</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quod sapiente facere, distinctio quis tempora consequuntur nostrum in perferendis optio impedit tenetur aliquam aliquid placeat.</p>
+            </div>
+            <div class="service-col">
+                <h3>Write and Earn</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quod sapiente facere, distinctio quis tempora consequuntur nostrum in perferendis optio impedit tenetur aliquam aliquid placeat.</p>
+            </div>  
+            <div class="service-col">  
+                <h3>Read and Earn</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi quod sapiente facere, distinctio quis tempora consequuntur nostrum in perferendis optio impedit tenetur aliquam aliquid placeat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Performers -->
+    <section class="top-performers">
+        
+    </section>
+    <!-- signup -->
+    <section class = "signup">
+
+    </section>
+
+    <!-- footer -->
+    <footer>
+
+    </footer>
+<!-- javascript for toggle menu -->
+    <script>
+        let navLinks = document.getElementById("nav-links");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>
